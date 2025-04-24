@@ -115,22 +115,107 @@
             </div>
           </div>
         </div>
-        <div class="justify-around flex flex-col lg:flex-row">
-          <button id="dogsBTN" class="btn btn-primary mt-3">Dogs</button>
-          <button id="catsBtn" class="btn btn-primary mt-3">Cats</button>
-          <button id="rabbitsBtn" class="btn btn-primary mt-3">Rabbits</button>
-          <button id="birdsBrn" class="btn btn-primary mt-3">Birds</button>
+        <div class="justify-around flex flex-col lg:flex-row mt-3">
+          <button id="dogsBTN" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">Dogs</button>
+          <button id="catsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">Cats</button>
+          <button id="rabbitsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">
+            Rabbits
+          </button>
+          <button id="birdsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">
+            Birds
+          </button>          
         </div>
       </section>
       <!-- Best Friend section -->
       <section class="lg:ml-[140px] lg:mr-[140px] lg:mt-[80px]">
+        <div class="mt-10 mb-10 justify-between flex">
+          <h2 class="text-2xl">Best Deal For You</h2>
+          <button class="btn bg-sky-600 text-white">Select by Price</button>
+        </div>
         <div class="flex lg:gap-10">
           <!-- left div -->
-          <div class="w-9/12 bg-red-600">
-            <img src="images/error.webp" alt="" />
+          <div class="w-9/12 bg-red-600 grid lg:grid-cols-3 gap-5 grid-cols-1">
+            <!-- Card -->
+            <div class="card bg-base-100 w-full shadow-sm">
+              <figure>
+                <img src="images/pet.webp" alt="Dogs" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Pet Name</h2>
+                <p><i class="fa-brands fa-slack"></i>Breed:</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Birth:</p>
+                <p><i class="fa-solid fa-venus-mars"></i>Gender:</p>
+                <p><i class="fa-solid fa-dollar-sign"></i>Price:</p>
+                <div class="card-actions justify-around spech">
+                  <button id="" class="btn">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <button id="" class="btn">Adopt</button>
+                  <button id="" class="btn">Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-full shadow-sm">
+              <figure>
+                <img src="images/pet.webp" alt="Dogs" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Pet Name</h2>
+                <p><i class="fa-brands fa-slack"></i>Breed:</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Birth:</p>
+                <p><i class="fa-solid fa-venus-mars"></i>Gender:</p>
+                <p><i class="fa-solid fa-dollar-sign"></i>Price:</p>
+                <div class="card-actions justify-around spech">
+                  <button id="" class="btn">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <button id="" class="btn">Adopt</button>
+                  <button id="" class="btn">Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-full shadow-sm">
+              <figure>
+                <img src="images/pet.webp" alt="Dogs" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Pet Name</h2>
+                <p><i class="fa-brands fa-slack"></i>Breed:</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Birth:</p>
+                <p><i class="fa-solid fa-venus-mars"></i>Gender:</p>
+                <p><i class="fa-solid fa-dollar-sign"></i>Price:</p>
+                <div class="card-actions justify-around spech">
+                  <button id="" class="btn">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <button id="" class="btn">Adopt</button>
+                  <button id="" class="btn">Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 w-full shadow-sm">
+              <figure>
+                <img src="images/pet.webp" alt="Dogs" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Pet Name</h2>
+                <p><i class="fa-brands fa-slack"></i>Breed:</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Birth:</p>
+                <p><i class="fa-solid fa-venus-mars"></i>Gender:</p>
+                <p><i class="fa-solid fa-dollar-sign"></i>Price:</p>
+                <div class="card-actions justify-around spech">
+                  <button id="" class="btn">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <button id="" class="btn">Adopt</button>
+                  <button id="" class="btn">Details</button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
           </div>
           <!-- right div -->
-          <div class="bg-green-600 w-3/12 flex flex-row gap-5 p-5">
+          <div class="bg-green-600 w-3/12 flex lg:flex-row flex-col gap-5 p-5">
             <div>
               <img src="images/error.webp" alt="" />
             </div>
@@ -144,7 +229,7 @@
     </main>
     <!-- Footer -->
     <footer
-      class="footer sm:footer-horizontal bg-base-300 text-base-content p-10"
+      class="footer sm:footer-horizontal bg-black-300 text-base-content p-10"
     >
       <nav>
         <div>
@@ -212,7 +297,7 @@
       <div>
         <h6 class="footer-title">drops Message</h6>
         <input type="text" placeholder="Type here" class="input" />
-        <button class="btn  bg-sky-600">Subscribe</button>
+        <button class="btn bg-sky-600 text-white">Subscribe</button>
       </div>
     </footer>
     <!-- Footer -->
