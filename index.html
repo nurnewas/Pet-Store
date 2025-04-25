@@ -116,14 +116,34 @@
           </div>
         </div>
         <div class="justify-around flex flex-col lg:flex-row mt-3">
-          <button id="dogsBTN" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">Dogs</button>
-          <button id="catsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">Cats</button>
-          <button id="rabbitsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">
+          <button
+            id="dogsBTN"
+            onclick="handleDogs(this)"
+            class="clickedBtn px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200"
+          >
+            Dogs
+          </button>
+          <button
+            id="catsBtn"
+            onclick="handleCats(this)"
+            class="clickedBtn px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200"
+          >
+            Cats
+          </button>
+          <button
+            id="rabbitsBtn"
+            onclick="handleRabbits(this)"
+            class="clickedBtn px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200"
+          >
             Rabbits
           </button>
-          <button id="birdsBtn" class="px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200">
+          <button
+            id="birdsBtn"
+            onclick="handleBirds(this)"
+            class="clickedBtn px-4 py-2 border border-primary text-black bg-transparent hover:bg-sky-200 active:bg-primary rounded-full transition-colors duration-200"
+          >
             Birds
-          </button>          
+          </button>
         </div>
       </section>
       <!-- Best Friend section -->
