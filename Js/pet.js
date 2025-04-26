@@ -1,139 +1,40 @@
-// All Pet fetch
-const allPet = async () => {
+const loadData = async () => {
   const response = await fetch(
     "https://openapi.programming-hero.com/api/peddy/pets"
   );
   const data = await response.json();
-  console.log(data.pets);
+  const pets = data.pets;
+  DisplayPets(pets);
+};
+//Display all pets
+const DisplayPets = (pets) => {
+  const petCardsContainer = document.getElementById("petCardsContainer");
+  pets.forEach((pet) => {
+    console.log(pet);
+    const petCard = document.createElement("div");
+    petCard.className = "card bg-base-100 w-full shadow-sm";
+    petCard.innerHTML = `
+                  <figure>
+                <img src="${pet.image}" alt="${pet.pet_name}" />
+              </figure>
+              <div class="card-body">
+               <h2 class="card-title">${pet.pet_name}</h2>
+                <p><i class="fa-brands fa-slack"></i> Breed: ${pet.breed}</p>
+          <p><i class="fa-solid fa-calendar-days"></i> Birth: ${pet.date_of_birth}</p>
+          <p><i class="fa-solid fa-venus-mars"></i> Gender: ${pet.gender}</p>
+          <p><i class="fa-solid fa-dollar-sign"></i> Price: $${pet.price}</p>
+          <div class="card-actions justify-around spech">
+                  <button id="" class="btn">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <button id="" class="btn">Adopt</button>
+                  <button id="" class="btn">Details</button>
+                </div>
+              </div>
+    
+    `;
+    petCardsContainer.append(petCard);
+  });
 };
 
-allPet();
-
-// button Dogs
-function handleDogs(clickedBtn) {
-  console.log("clicked");
-
-  //   button effect and active route
-  const allButtons = document.querySelectorAll("button");
-  allButtons.forEach((btn) => {
-    btn.classList.remove("bg-primary", "text-white");
-    btn.classList.add("bg-transparent", "text-black");
-  });
-  clickedBtn.classList.add("bg-primary", "text-white");
-  clickedBtn.classList.remove("bg-transparent", "text-black");
-}
-
-// button Cats
-function handleCats(clickedBtn) {
-  console.log("clicked");
-
-  //   button effect and active route
-  const allButtons = document.querySelectorAll("button");
-  allButtons.forEach((btn) => {
-    btn.classList.remove("bg-primary", "text-white");
-    btn.classList.add("bg-transparent", "text-black");
-  });
-  clickedBtn.classList.add("bg-primary", "text-white");
-  clickedBtn.classList.remove("bg-transparent", "text-black");
-}
-// button Rabbits
-function handleRabbits(clickedBtn) {
-    console.log("clicked");
-  
-    //   button effect and active route
-    const allButtons = document.querySelectorAll("button");
-    allButtons.forEach((btn) => {
-      btn.classList.remove("bg-primary", "text-white");
-      btn.classList.add("bg-transparent", "text-black");
-    });
-    clickedBtn.classList.add("bg-primary", "text-white");
-    clickedBtn.classList.remove("bg-transparent", "text-black");
-  }
-// Button Birds
-function handleBirds(clickedBtn) {
-    console.log("clicked");
-  
-    //   button effect and active route
-    const allButtons = document.querySelectorAll("button");
-    allButtons.forEach((btn) => {
-      btn.classList.remove("bg-primary", "text-white");
-      btn.classList.add("bg-transparent", "text-black");
-    });
-    clickedBtn.classList.add("bg-primary", "text-white");
-    clickedBtn.classList.remove("bg-transparent", "text-black");
-  }
-
-/////// pets
-// pets
-// :
-// Array(17)
-// 0
-// :
-// breed
-// :
-// "Golden Retriever"
-// category
-// :
-// "Dog"
-// date_of_birth
-// :
-// "2023-01-15"
-// gender
-// :
-// "Male"
-// image
-// :
-// "https://i.ibb.co.com/p0w744T/pet-1.jpg"
-// petId
-// :
-// 1
-// pet_details
-// :
-// "This friendly male Golden Retriever is energetic and loyal, making him a perfect companion for families. Born on January 15, 2023, he enjoys playing outdoors and is especially great with children. Fully vaccinated, he's ready to join your family and bring endless joy. Priced at $1200, he offers love, loyalty, and a lively spirit for those seeking a playful yet gentle dog."
-// pet_name
-// :
-// "Sunny"
-// price
-// :
-// 1200
-// vaccinated_status
-// :
-// "Fully"
-// [[Prototype]]
-// :
-// Object
-// 1
-// :
-// breed
-// :
-// "Siamese"
-// category
-// :
-// "Cat"
-// date_of_birth
-// :
-// "2022-09-05"
-// gender
-// :
-// "Female"
-// image
-// :
-// "https://i.ibb.co.com/3Wzz41D/pet-2.jpg"
-// petId
-// :
-// 2
-// pet_details
-// :
-// "This affectionate female Siamese cat is known for her vocal nature and love for attention. Born on September 5, 2022, she enjoys interactive play and snuggles. Fully vaccinated and priced at $800, she's the perfect fit for cat lovers who appreciate an intelligent, engaging, and sociable feline companion."
-// pet_name
-// :
-// "Mia"
-// price
-// :
-// 800
-// vaccinated_status
-// :
-// "Fully"
-// [[Prototype]]
-// :
-// Object
+loadData();
