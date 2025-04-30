@@ -5,11 +5,20 @@ const loadData = async () => {
   const data = await response.json();
   const pets = data.pets;
 
+  // btn
+
+  // btn
   // loader
   setTimeout(() => {
     document.getElementById("loader").classList.add("hidden");
     DisplayPets(pets);
   }, 2000);
+
+  handleBirds.addEventListener("click", () => {
+    document.getElementById("petCardsContainer").innerHTML = "";
+    const birds = pets.filter((pet) => pet.category === "Birds");
+    DisplayPets(birds);
+  });
 };
 
 // loader
