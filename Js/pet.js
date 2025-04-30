@@ -1,23 +1,20 @@
 const loadData = async () => {
-
   const response = await fetch(
     "https://openapi.programming-hero.com/api/peddy/pets"
   );
   const data = await response.json();
   const pets = data.pets;
-  DisplayPets(pets);
 
   // loader
   setTimeout(() => {
-  document.getElementById("loader").classList.add("hidden");
-}, 2000);
+    document.getElementById("loader").classList.add("hidden");
+    DisplayPets(pets);
+  }, 2000);
 };
 
-// loader 
+// loader
 document.getElementById("loader").classList.remove("hidden");
-
-
-// loader 
+// loader
 //Display all pets
 const DisplayPets = (pets) => {
   const petCardsContainer = document.getElementById("petCardsContainer");
